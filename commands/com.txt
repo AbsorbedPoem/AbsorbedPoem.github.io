@@ -1,0 +1,1 @@
+activar tailwind: npx tailwindcss -i ./styles/telemedicina_theme.css -o ./styles/output.css --watch

@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BOTONES */
+.btn {
+    @apply py-2 px-4 rounded;
+    @apply outline outline-4 outline-transparent;
+    transition: background-color .12s ease-in-out, outline-color .2s;
+}
+
+.btn-main {
+    @apply bg-main-700  text-white;
+}
+.btn-main:hover { @apply bg-main-800 }
+.btn-main:focus:not(:disabled) { @apply bg-main-800 outline-main-400 }
+.btn-main:disabled { @apply bg-main-400 text-gray-200 cursor-not-allowed}
+
+
+.card {
+    @apply rounded bg-white p-3;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicina</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="https://kit.fontawesome.com/be5dea804b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- Main navigation container -->
+        <nav class="text-white flex-no-wrap fixed flex w-full items-center justify-between bg-slate-700 py-2 shadow-md md:flex-wrap md:justify-start md:py-3">
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <!-- boton de barras para abrir menú (movil) -->
+                <button class="block border rounded bg-transparent border-slate-600   px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 md:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- elementos de la izquierad -->
+                <div></div>
+
+                <!-- elementos de la derecha -->
+                <div class="relative flex items-center">
+                    <!-- carrito -->
+                    <a class="me-4" href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+
+                    <!-- campana -->
+                    <div class="relative">
+                        <a href="#" class="me-4 flex items-center">
+
+                            <!-- campana icono -->
+                            <span class="[&>i]:w-5">
+                                <i class="fas fa-bell"></i>
+                            </span>
+                            <!-- contador -->
+                            <span class="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white">
+                                1
+                            </span>
+                        </a>
+                    </div>
+
+                    <!-- logo de usuario -->
+                    <div class="relative">
+                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none">
+                            <!-- imagen de usuario -->
+                            <img
+                                src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                                class="rounded-full"
+                                style="height: 25px; width: 25px"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN SCREEN -->
+    <main>
+        <div class="min-h-[100vh] flex pt-[40px] md:pt-[47px]">
+
+            <aside class="p-5 bg-main-500 z-1 flex flex-col justify-between items-center text-white">
+                <!-- ARRIBA -->
+                <div class="flex flex-col gap-4 [&>div]:flex [&>div]:gap-2 [&>div>p]:whitespace-nowrap">
+                    <div>
+                        <i class="fas fa-bell"></i>
+                        <p>Módulo 1</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-bell"></i>
+                        <p>Módulo 1</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-bell"></i>
+                        <p>Módulo 1</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-bell"></i>
+                        <p>Módulo 1</p>
+                    </div>
+                </div>
+                <!-- abajo -->
+                <div>
+                    <div class="text-xl">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+            </aside>
+    
+            <!-- CONTENIDO IMPORTANTE AQUÍ -->
+            <section class="p-5 w-[100%]">
+
+                <!-- marcador de página -->
+                <p class="text-gray-700 text-sm">Cuenta > Cambiar contraseña</p>
+
+                <!-- Título (si aplica) -->
+                <h1 class="text-3xl font-bold mt-2">Título de Ejemplo</h1>
+
+                <!-- contenido -->
+                <div class="card">
+                    
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+
+</body>
+</html>
