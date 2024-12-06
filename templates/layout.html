@@ -11,15 +11,19 @@
     <!-- HEADER -->
     <header>
         <!-- Main navigation container -->
-        <nav class="text-white flex-no-wrap fixed flex w-full items-center justify-between bg-slate-700 py-2 shadow-md md:flex-wrap md:justify-start md:py-3">
+        <nav class="text-zinc-700 flex-no-wrap fixed flex w-full items-center justify-between bg-white py-2 shadow-md md:flex-wrap md:justify-start md:py-3">
             <div class="flex w-full flex-wrap items-center justify-between px-3">
                 <!-- boton de barras para abrir menú (movil) -->
                 <button class="block border rounded bg-transparent border-slate-600   px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 md:hidden">
                     <i class="fas fa-bars"></i>
                 </button>
 
-                <!-- elementos de la izquierad -->
-                <div></div>
+                <!-- elementos de la izquierda -->
+                <div class="font-bold flex">
+                    <img src="/img/logo.png" class="rounded-full w-[25px] h-[25px]">
+                    <span>&nbsp;Telemedicina</span>
+                    <span class="text-blue-500">&nbsp;Maracay</span>
+                </div>
 
                 <!-- elementos de la derecha -->
                 <div class="relative flex items-center">
@@ -37,21 +41,20 @@
                                 <i class="fas fa-bell"></i>
                             </span>
                             <!-- contador -->
-                            <span class="absolute -mt-4 ms-2.5 rounded-full bg-danger px-[0.35em] py-[0.15em] text-[0.6rem] font-bold leading-none text-white">
-                                1
-                            </span>
+                            <span class="absolute -mt-4 ms-[9px] rounded-full bg-red-500 px-[0.55em] py-[0.55em] text-[0.6rem] font-bold leading-none"></span>
                         </a>
                     </div>
 
                     <!-- logo de usuario -->
                     <div class="relative">
-                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none">
+                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
+                        border border-zinc-200 rounded-full">
                             <!-- imagen de usuario -->
                             <img
                                 src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
-                                class="rounded-full"
-                                style="height: 25px; width: 25px"
+                                class="rounded-full w-[25px] h-[25px] m-1"
                             />
+                            <span class="mx-2">Usuario 1</span>
                         </a>
                     </div>
                 </div>
@@ -61,51 +64,82 @@
 
     <!-- MAIN SCREEN -->
     <main>
-        <div class="min-h-[100vh] flex pt-[40px] md:pt-[47px]">
-
-            <aside class="p-5 bg-main-500 z-1 flex flex-col justify-between items-start text-white">
+        <div class="min-h-[100vh] flex pt-[40px] md:pt-[59px]">
+            
+            <!-- SIDEBAR -->
+            <aside class="p-1 bg-slate-800 hidden md:flex flex-col justify-between items-start text-gray-200 text-xs">
                 <!-- ARRIBA -->
-                <div class="flex flex-col gap-4 [&>div]:flex [&>div]:gap-2 [&>div>p]:whitespace-nowrap">
-                    <div>
-                        <i class="fas fa-bell"></i>
-                        <p>Módulo 1</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-bell"></i>
-                        <p>Módulo 1</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-bell"></i>
-                        <p>Módulo 1</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-bell"></i>
-                        <p>Módulo 1</p>
-                    </div>
+                <div class="flex flex-col gap-1">
+                    <a href="#" class="nav-item text-sm">
+                        <i class="fas fa-cube"></i>
+                        <p>Telemedicina</p>
+                    </a>
+
+                    <hr class="border-gray-400">
+                    
+                    <a href="#" class="nav-item active">
+                        <i class="fas fa-address-card"></i>
+                        <p>Especialistas</p>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="far fa-calendar-days"></i>
+                        <p>Horarios</p>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-message"></i>
+                        <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
+                        <p>Mensajes</p>
+                    </a>
+
+                    <hr class="border-gray-400">
+                    
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-bolt"></i>
+                        <p>Turbo</p>
+                    </a>
+                    
                 </div>
                 <!-- abajo -->
-                <div>
-                    <div class="text-xl">
+                <div class="flex flex-col gap-1 w-[100%]">
+                    
+                    <hr class="border-gray-400">
+
+                    <a href="#" class="nav-item nav-item-config justify-between">
+                        <img
+                            src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                            class="rounded-full w-[20px] h-[20px]"
+                        />
+                        <p>Usuario 1</p>
                         <i class="fa-solid fa-gear"></i>
-                    </div>
+                    </a>
                 </div>
             </aside>
     
-            <!-- CONTENIDO IMPORTANTE AQUÍ -->
-            <section class="p-5 w-[100%]">
+            <!-- CONTENT -->
+            <div class="w-[100%]">
 
                 <!-- marcador de página -->
-                <p class="text-gray-700 text-sm">Cuenta > Cambiar contraseña</p>
+                <p class="bg-slate-500 p-2 text-white text-xs">Cuenta » Cambiar contraseña</p>
+    
+                <!-- CONTENIDO PROPIO DE LA PáGINA -->
+                <section class="p-5">
+    
+    
+                    <!-- Título (si aplica) -->
+                    <h1 class="text-3xl font-bold mt-2">Título de Ejemplo</h1>
+    
+                    <!-- contenido -->
+                    <div class="card">
+                        asdasalsdnasd
+                    </div>
+    
+                </section>
 
-                <!-- Título (si aplica) -->
-                <h1 class="text-3xl font-bold mt-2">Título de Ejemplo</h1>
+            </div>
 
-                <!-- contenido -->
-                <div class="card">
-                    
-                </div>
-
-            </section>
+            <a href="#" class="no-underline rounded-full shadow-lg border fixed bottom-5 right-5 p-2 flex text-zinc-700 bg-blue-300">
+                <i class="fab fa-intercom"></i>
+            </a>
 
         </div>
     </main>
