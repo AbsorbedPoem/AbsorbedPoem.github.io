@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*****************************************************************************************
+    GENERAL
+*****************************************************************************************/
 
 /* FUENTES */
 body * {
@@ -10,11 +10,16 @@ body h1 {
     font-family: 'Arial';
 }
 
+
+
+/*****************************************************************************************
+    COMPONENTES
+*****************************************************************************************/
+
 /* BOTONES */
 .btn {
     @apply py-2 px-4 rounded;
-    @apply outline outline-4 outline-transparent;
-    transition: background-color .12s ease-in-out, outline-color .2s;
+    @apply outline outline-4 outline-transparent transition-all;
 }
 
 .btn-main {
@@ -24,10 +29,57 @@ body h1 {
 .btn-main:focus:not(:disabled) { @apply bg-main-800 outline-main-400 }
 .btn-main:disabled { @apply bg-main-400 text-gray-200 cursor-not-allowed}
 
+
 /* CARD  */
 .card {
-    @apply rounded border p-3;
+    @apply rounded p-3 bg-white shadow-md;
 }
+
+.gray-card {
+    @apply rounded p-3 bg-gray-200 text-zinc-600;
+}
+
+
+
+/*****************************************************************************************
+    HEADER
+*****************************************************************************************/
+
+/* GLOBO DE USUARIO */
+.user-globe {
+    @apply flex items-center whitespace-nowrap duration-150 ease-in-out motion-reduce:transition-none
+    border border-zinc-300 rounded-full transition-colors;
+    /* transition: all .12s ease-in-out; */
+}
+
+
+/* NAV ICON */
+.header-mini-button {
+    @apply rounded-full flex h-[30px] w-[30px] items-center justify-center transition-colors;
+}
+.user-globe:hover, .header-mini-button:hover { @apply bg-main-300 border-main-300 }
+
+
+/* DROPDOWN */
+.dropdown {
+    @apply absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-main-500 shadow-lg ring-1 ring-black/5;
+}
+.dropdown:focus { @apply outline-none }
+.dropdown .item {
+    @apply block px-4 py-2 text-sm text-white border-b border-b-main-300 transition-colors;
+}
+.dropdown .item:hover { @apply bg-main-300 }
+.dropdown .item.last { @apply border-none }
+
+
+
+
+
+
+/*****************************************************************************************
+    ASIDE
+*****************************************************************************************/
+
 
 /* NAV ITEM */
 a.nav-item {
@@ -38,3 +90,9 @@ a.nav-item.active { @apply bg-slate-600 }
 a.nav-item:hover:not(.active) { @apply bg-slate-700 }
 a.nav-item>p { @apply whitespace-nowrap }
 a.nav-item.nav-item-config { @apply pe-2 }
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
