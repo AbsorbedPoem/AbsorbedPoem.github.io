@@ -6,6 +6,7 @@
     <title>Telemedicina</title>
     <link rel="stylesheet" href="/styles/output.css">
     <script src="https://kit.fontawesome.com/be5dea804b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -46,7 +47,7 @@
                     </div>
 
                     <!-- logo de usuario -->
-                    <div class="relative">
+                    <div id="dropdownDefaultButton" data-dropdown-toggle="dropdown">
                         <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
                         border border-zinc-200 rounded-full">
                             <!-- imagen de usuario -->
@@ -57,6 +58,18 @@
                             <span class="mx-2">Usuario 1</span>
                         </a>
                     </div>
+                    <div id="dropdown" class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                            <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
+                            <form method="POST" action="#" role="none">
+                                <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -67,10 +80,10 @@
         <div class="min-h-[100vh] flex pt-[40px] md:pt-[59px]">
             
             <!-- SIDEBAR -->
-            <aside class="p-1 bg-slate-800 hidden md:flex flex-col justify-between items-start text-gray-200 text-xs">
+            <aside class="p-1 bg-slate-800 hidden md:flex flex-col justify-between items-start text-gray-200 text-sm">
                 <!-- ARRIBA -->
                 <div class="flex flex-col gap-1">
-                    <a href="#" class="nav-item text-sm">
+                    <a href="#" class="nav-item text-md">
                         <i class="fas fa-cube"></i>
                         <p>Telemedicina</p>
                     </a>
@@ -90,13 +103,6 @@
                         <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
                         <p>Mensajes</p>
                     </a>
-
-                    <hr class="border-gray-400">
-                    
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-bolt"></i>
-                        <p>Turbo</p>
-                    </a>
                     
                 </div>
                 <!-- abajo -->
@@ -112,6 +118,7 @@
                         <p>Usuario 1</p>
                         <i class="fa-solid fa-gear"></i>
                     </a>
+                    
                 </div>
             </aside>
     
@@ -130,7 +137,9 @@
     
                     <!-- contenido -->
                     <div class="card">
-                        asdasalsdnasd
+                        <button class="btn btn-main" type="button">
+                            A
+                        </button>
                     </div>
     
                 </section>
