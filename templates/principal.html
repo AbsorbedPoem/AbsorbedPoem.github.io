@@ -27,28 +27,29 @@
                 </a>
 
                 <!-- elementos de la derecha -->
-                <div class="flex items-center gap-2">
+                <div class="relative flex items-center">
                     <!-- carrito -->
                     <a class="header-mini-button" href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
 
                     <!-- campana -->
-                    <div class="header-mini-button">
-                        <a href="#" class="flex items-center">
+                    <div class="relative">
+                        <a href="#" class="me-4 flex items-center">
 
                             <!-- campana icono -->
                             <span>
                                 <i class="fas fa-bell"></i>
                             </span>
-                            <!-- contador -->
+                            <!-- notificacion -->
                             <span class="absolute -mt-4 ms-[9px] rounded-full bg-red-500 px-[0.55em] py-[0.55em] text-[0.6rem] font-bold leading-none"></span>
                         </a>
                     </div>
 
                     <!-- logo de usuario -->
-                    <div>
-                        <a href="#" class="user-globe" id="dropdownDefaultButton" data-dropdown-toggle="dropdown-usuario">
+                    <div class="relative">
+                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
+                        border border-zinc-200 rounded-full">
                             <!-- imagen de usuario -->
                             <img
                                 src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
