@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telemedicina</title>
+    <link rel="stylesheet" href="/styles/output.css">
+    <script src="https://kit.fontawesome.com/be5dea804b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <!-- Main navigation container -->
+        <nav class="text-zinc-700 flex-no-wrap fixed flex w-full items-center justify-between bg-white py-2 shadow-md md:flex-wrap md:justify-start md:py-3 z-10">
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <!-- boton de barras para abrir menú (movil) -->
+                <button class="block border border-zinc-300 rounded px-2 md:hidden hover:bg-main-600 hover:border-main-600 hover:text-white" style="transition: all .12s ease-in-out;" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- elementos de la izquierda -->
+                <a href="principal.html" class="font-bold hidden md:flex">
+                    <img src="/img/logo.png" class="rounded-full w-[25px] h-[25px]">
+                    <span>&nbsp;Telemedicina</span>
+                    <span class="text-blue-500">&nbsp;Maracay</span>
+                </a>
+
+                <!-- elementos de la derecha -->
+                <div class="relative flex items-center">
+                    <!-- carrito -->
+                    <a class="header-mini-button" href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+
+                    <!-- campana -->
+                    <div class="relative">
+                        <a href="#" class="me-4 flex items-center">
+
+                            <!-- campana icono -->
+                            <span>
+                                <i class="fas fa-bell"></i>
+                            </span>
+                            <!-- notificacion -->
+                            <span class="absolute -mt-4 ms-[9px] rounded-full bg-red-500 px-[0.55em] py-[0.55em] text-[0.6rem] font-bold leading-none"></span>
+                        </a>
+                    </div>
+
+                    <!-- logo de usuario -->
+                    <div class="relative">
+                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
+                        border border-zinc-200 rounded-full">
+                            <!-- imagen de usuario -->
+                            <img
+                                src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                                class="rounded-full w-[25px] h-[25px] m-1"
+                            />
+                            <span class="mx-2">Usuario 1</span>
+                        </a>
+                    </div>
+                    <!-- Dropdown -->
+                    <div id="dropdown-usuario" class="dropdown hidden">
+                        <div class="py-1" role="none">
+                            <a href="#" class="item">Configuración</a>
+                            <a href="#" class="item">Soporte</a>
+                            <a href="#" class="item last">Cerrar Sesión</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN SCREEN -->
+    <main>
+        <div class="min-h-[100vh] flex pt-[51px] md:pt-[59px] relative">
+            
+            <!-- SIDEBAR -->
+            <aside id="default-sidebar" class="fixed top-0 left-0 transition-transform -translate-x-full md:translate-x-0 h-screen z-40 min-w-[60%] [&>div]:w-[100%]
+            md:static md:z-0 md:h-auto
+            md:min-w-fit p-1 bg-slate-800 flex flex-col-reverse md:flex-col justify-end md:justify-between items-start text-gray-200 text-sm">
+                <!-- ARRIBA -->
+                <div class="flex flex-col gap-1">
+                    <a href="principal.html" class="nav-item text-md">
+                        <i class="fas fa-cube"></i>
+                        <p>Telemedicina</p>
+                    </a>
+
+                    <hr class="border-gray-400">
+                    
+                    <a href="principal.html" class="nav-item active">
+                        <i class="fas fa-address-card"></i>
+                        <p>Especialistas</p>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="far fa-clock"></i>
+                        <p>Pendientes</p>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="far fa-calendar-days"></i>
+                        <p>Cronograma</p>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-message"></i>
+                        <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
+                        <p>Mensajes</p>
+                    </a>
+
+                    <hr class="border-gray-400">
+
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-video"></i>
+                        <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
+                        <p>Sala</p>
+                    </a>
+                    
+                </div>
+                <!-- abajo -->
+                <div class="flex flex-col-reverse md:flex-col gap-1 w-[100%]">
+                    
+                    <hr class="border-gray-400">
+
+                    <a href="#" class="nav-item nav-item-config justify-between">
+                        <img
+                            src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
+                            class="rounded-full w-[20px] h-[20px]"
+                        />
+                        <p>Usuario 1</p>
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+                    
+                </div>
+            </aside>
+    
+            <!-- CONTENT -->
+            <div class="w-[100%]">
+
+                <!-- marcador de página » -->
+                <p class="bg-slate-500 p-2 text-white text-xs">Cronograma » Citas </p>
+    
+                <!-- CONTENIDO PROPIO DE LA PáGINA -->
+                <section class="p-5 bg-slate-100 grid grid-cols-5 gap-5">
+    
+                    <!-- contenido -->
+                    <div class="card col-span-4">
+                        <div class="text-center text-lg font-semibold text-gray-800"><h3>Lunes</h3></div>
+                        <br>
+                        <div class="grid grid-cols-12 gap-4">
+                            <!-- Horas de 7 AM a 7 PM -->
+                            <div class="col-span-1 text-center">7 AM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 1</div>
+                        
+                            <div class="col-span-1 text-center">8 AM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 2</div>
+                        
+                            <div class="col-span-1 text-center">9 AM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+
+                            <div class="col-span-1 text-center">10 AM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 1</div>
+                        
+                            <div class="col-span-1 text-center">11 AM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 2</div>
+                        
+                            <div class="col-span-1 text-center">12 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">1 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">2 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">3 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">4 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">5 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                        
+                            <div class="col-span-1 text-center">6 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 10</div>
+                        
+                            <div class="col-span-1 text-center">7 PM</div>
+                            <div class="col-span-11 border border-gray-200 p-2">Actividad 11</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="max-w-xs mx-auto mt-6">
+                            <div class="bg-white border border-gray-300 rounded-lg shadow-md p-4">
+                              <div class="flex items-center justify-between">
+                                <button class="text-gray-500 hover:text-gray-800">
+                                  &larr; noviembre
+                                </button>
+                                <div class="text-center">
+                                  <p class="text-lg font-semibold text-gray-800">diciembre 2024</p>
+                                </div>
+                                <button class="text-gray-500 hover:text-gray-800">
+                                  enero &rarr;
+                                </button>
+                              </div>
+                              <div class="grid grid-cols-7 gap-1 text-center mt-4 text-sm text-gray-700">
+                                <span class="font-medium">Lun</span>
+                                <span class="font-medium">Mar</span>
+                                <span class="font-medium">Mié</span>
+                                <span class="font-medium">Jue</span>
+                                <span class="font-medium">Vie</span>
+                                <span class="font-medium">Sáb</span>
+                                <span class="font-medium">Dom</span>
+                                <span class="text-gray-400">27</span>
+                                <span class="text-gray-400">28</span>
+                                <span class="text-gray-400">29</span>
+                                <span class="text-gray-400">30</span>
+                                <span class="text-gray-400">1</span>
+                                <span class="text-gray-400">2</span>
+                                <span class="text-gray-400">3</span>
+                                <span class="text-gray-400">4</span>
+                                <span>5</span>
+                                <span>6</span>
+                                <span class="bg-blue-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">9</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">10</span>
+                                <span>11</span>
+                                <span>12</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">13</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">14</span>
+                                <span>15</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">16</span>
+                                <span>17</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">18</span>
+                                <span>19</span>
+                                <span>20</span>
+                                <span>21</span>
+                                <span>22</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">23</span>
+                                <span>24</span>
+                                <span>25</span>
+                                <span>26</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">27</span>
+                                <span>28</span>
+                                <span class="bg-slate-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">29</span>
+                                <span>30</span>
+                                <span>31</span>
+                              </div>
+                              <div class="flex items-center justify-between mt-4">
+                                <button href="calendario.html" class="text-blue-500 hover:underline">Calendario completo</button>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div>
+    
+                </section>
+
+            </div>
+
+            <a href="#" class="no-underline rounded-full shadow-lg border fixed bottom-5 right-5 p-2 flex text-zinc-700 bg-blue-300 text-2xl">
+                <i class="fab fa-intercom"></i>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+    </footer>
+    <div class="bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30 hidden"></div>
+</body>
+</html>
