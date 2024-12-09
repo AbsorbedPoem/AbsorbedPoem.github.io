@@ -6,38 +6,39 @@
     <title>Telemedicina</title>
     <link rel="stylesheet" href="/styles/output.css">
     <script src="https://kit.fontawesome.com/be5dea804b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <!-- Main navigation container -->
-        <nav class="text-zinc-700 flex-no-wrap fixed flex w-full items-center justify-between bg-white py-2 shadow-md md:flex-wrap md:justify-start md:py-3">
+        <nav class="text-zinc-700 flex-no-wrap fixed flex w-full items-center justify-between bg-white py-2 shadow-md md:flex-wrap md:justify-start md:py-3 z-10">
             <div class="flex w-full flex-wrap items-center justify-between px-3">
                 <!-- boton de barras para abrir menú (movil) -->
-                <button class="block border rounded bg-transparent border-slate-600   px-2 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 md:hidden">
+                <button class="block border border-zinc-300 rounded px-2 md:hidden hover:bg-main-600 hover:border-main-600 hover:text-white" style="transition: all .12s ease-in-out;" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar">
                     <i class="fas fa-bars"></i>
                 </button>
 
                 <!-- elementos de la izquierda -->
-                <div class="font-bold flex ">
+                <div class="font-bold hidden md:flex">
                     <img src="/img/logo.png" class="rounded-full w-[25px] h-[25px]">
                     <span>&nbsp;Telemedicina</span>
                     <span class="text-blue-500">&nbsp;Maracay</span>
                 </div>
 
                 <!-- elementos de la derecha -->
-                <div class="flex items-center">
+                <div class="relative flex items-center">
                     <!-- carrito -->
-                    <a class="me-4" href="#">
+                    <a class="header-mini-button" href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
 
                     <!-- campana -->
-                    <div>
+                    <div class="relative">
                         <a href="#" class="me-4 flex items-center">
 
                             <!-- campana icono -->
-                            <span class="[&>i]:w-5">
+                            <span>
                                 <i class="fas fa-bell"></i>
                             </span>
                             <!-- notificacion -->
@@ -46,7 +47,7 @@
                     </div>
 
                     <!-- logo de usuario -->
-                    <div>
+                    <div class="relative">
                         <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
                         border border-zinc-200 rounded-full">
                             <!-- imagen de usuario -->
@@ -57,6 +58,15 @@
                             <span class="mx-2">Usuario 1</span>
                         </a>
                     </div>
+                    <div id="dropdown-usuario" class="dropdown hidden">
+                        <div class="py-1" role="none">
+                            <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
+                            <a href="#" class="item">Configuración</a>
+                            <a href="#" class="item">Soporte</a>
+                            <a href="#" class="item last">Cerrar Sesión</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -64,13 +74,15 @@
 
     <!-- MAIN SCREEN -->
     <main>
-        <div class="min-h-[100vh] flex pt-[40px] md:pt-[59px]">
+        <div class="min-h-[100vh] flex pt-[51px] md:pt-[59px] relative">
             
             <!-- SIDEBAR -->
-            <aside class="p-1 bg-slate-800 hidden md:flex flex-col justify-between items-start text-gray-200 text-xs">
+            <aside id="default-sidebar" class="fixed top-0 left-0 transition-transform -translate-x-full md:translate-x-0 h-screen z-40 min-w-[60%] [&>div]:w-[100%]
+            md:static md:z-0 md:h-auto
+            md:min-w-fit p-1 bg-slate-800 flex flex-col-reverse md:flex-col justify-end md:justify-between items-start text-gray-200 text-sm">
                 <!-- ARRIBA -->
                 <div class="flex flex-col gap-1">
-                    <a href="#" class="nav-item text-sm">
+                    <a href="#" class="nav-item text-md">
                         <i class="fas fa-cube"></i>
                         <p>Telemedicina</p>
                     </a>
@@ -90,17 +102,10 @@
                         <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
                         <p>Mensajes</p>
                     </a>
-
-                    <hr class="border-gray-400">
-                    
-                    <a href="#" class="nav-item">
-                        <i class="fas fa-bolt"></i>
-                        <p>Turbo</p>
-                    </a>
                     
                 </div>
                 <!-- abajo -->
-                <div class="flex flex-col gap-1 w-[100%]">
+                <div class="flex flex-col-reverse md:flex-col gap-1 w-[100%]">
                     
                     <hr class="border-gray-400">
 
@@ -112,25 +117,45 @@
                         <p>Usuario 1</p>
                         <i class="fa-solid fa-gear"></i>
                     </a>
+                    
                 </div>
             </aside>
     
             <!-- CONTENT -->
             <div class="w-[100%]">
 
-                <!-- marcador de página -->
-                <p class="bg-slate-500 p-2 text-white text-xs">Cuenta » Cambiar contraseña</p>
+                <!-- marcador de página » -->
+                <p class="bg-slate-500 p-2 text-white text-xs">principal</p>
     
                 <!-- CONTENIDO PROPIO DE LA PáGINA -->
-                <section class="p-5">
+                <section class="p-5 bg-slate-100">
     
-    
-                    <!-- Título (si aplica) -->
-                    <h1 class="text-3xl font-bold mt-2">Título de Ejemplo</h1>
-    
+
+                    <div class="card mb-4 text-zinc-600 text-sm">
+                        Para brindarte un mejor servicio, necesitamos saber tu historia médica &nbsp;<div class="btn btn-main text-xsm inline-block py-1 rounded-lg">Llenar historial</div>
+                    </div>
+
                     <!-- contenido -->
                     <div class="card">
-                        asdasalsdnasd
+                        <div class="text-center">
+                            <h1 class="text-3xl my-10">
+                                Hola👋, nos alegra volver a verte!
+                            </h1>
+                            <p class="text-sm text-zinc-600 mb-3">Programa una consulta <b>en línea</b> con un <b>profesional de la salud</b></p>
+                            <input class="md:text-xl rounded-full bg-gray-200 appearance-none border-2 border-gray-200 py-3 w-[80%] m-auto px-5 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 transition-colors" id="inline-full-name" type="text"
+                            placeholder="Qué disciplina necesitas?">
+                        </div>
+
+                        <hr class="my-3">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                            <div class="gray-card">Doctorcito 1</div>
+                            <div class="gray-card">Doctorcito 2</div>
+                            <div class="gray-card">Doctorcito 3</div>
+                            <div class="gray-card">Doctorcito 4</div>
+                            <div class="gray-card">Doctorcito 5</div>
+                            <div class="gray-card">Doctorcito 6</div>
+                        </div>
                     </div>
     
                 </section>
@@ -148,6 +173,6 @@
     <footer>
 
     </footer>
-
+    <div class="bg-gray-900/50 dark:bg-gray-900/80 fixed inset-0 z-30 hidden"></div>
 </body>
 </html>
