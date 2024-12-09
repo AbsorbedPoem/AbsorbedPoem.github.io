@@ -39,10 +39,11 @@ body h1 {
     @apply rounded p-2 bg-white text-zinc-800;
 }
 
+/* CARD DE PROFESIONAL MÉDICO */
 .card-group-medicos>div {
     @apply gray-card flex flex-col gap-2 transition-all cursor-pointer;
 }
-.card-group-medicos>div:hover { @apply bg-gray-200 shadow-md -translate-y-2 }
+.card-group-medicos>div:hover { @apply bg-blue-100 shadow-md -translate-y-1 }
 .card-group-medicos>div>:first-child {
     @apply flex gap-2;
 }
