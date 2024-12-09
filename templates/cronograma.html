@@ -48,8 +48,8 @@
 
                     <!-- logo de usuario -->
                     <div class="relative">
-                        <a href="#" class="flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
-                        border border-zinc-200 rounded-full">
+                        <a href="#" class="user-globe flex items-center whitespace-nowrap transition duration-150 ease-in-out motion-reduce:transition-none
+                        border border-zinc-200 rounded-full" data-dropdown-toggle="dropdown-usuario">
                             <!-- imagen de usuario -->
                             <img
                                 src="https://tecdn.b-cdn.net/img/new/avatars/2.jpg"
@@ -140,67 +140,93 @@
                 <p class="bg-slate-500 p-2 text-white text-xs">Cronograma » Citas </p>
     
                 <!-- CONTENIDO PROPIO DE LA PáGINA -->
-                <section class="p-5 bg-slate-100 grid grid-cols-5 gap-5">
+                <section class="p-5 bg-slate-100 flex flex-col lg:flex-row gap-5">
     
                     <!-- contenido -->
-                    <div class="card col-span-4">
+                    <div class="card flex-grow">
                         <div class="text-center text-lg font-semibold text-gray-800"><h3>Lunes</h3></div>
                         <br>
                         <div class="grid grid-cols-12 gap-4">
-                            <!-- Horas de 7 AM a 7 PM -->
-                            <div class="col-span-1 text-center">7 AM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 1</div>
-                        
-                            <div class="col-span-1 text-center">8 AM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 2</div>
-                        
-                            <div class="col-span-1 text-center">9 AM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
+                            <!-- Horas de 7 a.m. a 7 p.m. -->
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">7 a.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">8 a.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">9 a.m.</div>
 
-                            <div class="col-span-1 text-center">10 AM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 1</div>
-                        
-                            <div class="col-span-1 text-center">11 AM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 2</div>
-                        
-                            <div class="col-span-1 text-center">12 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">1 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">2 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">3 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">4 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">5 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 3</div>
-                        
-                            <div class="col-span-1 text-center">6 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 10</div>
-                        
-                            <div class="col-span-1 text-center">7 PM</div>
-                            <div class="col-span-11 border border-gray-200 p-2">Actividad 11</div>
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">10 a.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">11 a.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">12 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">1 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">2 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">3 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">4 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">5 p.m.</div>
+                            
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">6 p.m.</div>
+
+                                <div class="col-start-1 col-end-2 whitespace-nowrap">7 p.m.</div>
+                                                                         
+
+                            <!-- Actividades -->
+                            
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-1 row-span-3 flex justify-between flex-col md:flex-row ">
+                                   
+                                    <div class="text-left p-5">
+                                        <div>Cita con <b>Alberto Aguilera</b></div>
+                                        <br>
+                                        <div><b>Motivado a:</b> Dolor punzante en el pecho, mareos y malestar general.</div>
+                                        <br>
+                                        <div><b>Detalles:</b> Diabetes, hipertensión.</div>
+                                    </div>
+                                    
+                                    <div class="text-center border-t p-5 pe-3 md:border-l md:border-t-0 ">
+                                        <img src="/img/alberto.png" class="w-[100px] h-[100px] mx-auto">    
+                                        <div>
+                                            <b class="whitespace-nowrap">Alberto Aguilera</b>
+                                            <br>
+                                            <span class="bg-green-200 text-green-900 group-hover:bg-green-300 text-xs font-medium px-2.5 py-0.5 rounded-full transition-colors">En línea</span>
+                                            <div class="text-sm">
+                                                <a href="#" class="text-slate-500 underline">Ver paciente<i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-4">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-5">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-6">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-7">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-8">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-9">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-10">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-11">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-12">Actividad 1</div>
+                                <div class="border-gray-200 border rounded p-2 col-start-3 col-end-13 row-start-13 bg-slate-500 text-white flex items-center"> Espacio libre</div>
+                            
                         </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card flex-shrink min-w-[240px]">
+                        <div class="text-center font-semibold">Calendario</div>
                         <div class="max-w-xs mx-auto mt-6">
                             <div class="bg-white border border-gray-300 rounded-lg shadow-md p-4">
                               <div class="flex items-center justify-between">
                                 <button class="text-gray-500 hover:text-gray-800">
-                                  &larr; noviembre
+                                  &larr; 
                                 </button>
                                 <div class="text-center">
-                                  <p class="text-lg font-semibold text-gray-800">diciembre 2024</p>
+                                  <p class="text-lg font-semibold text-gray-800">Diciembre</p>
                                 </div>
                                 <button class="text-gray-500 hover:text-gray-800">
-                                  enero &rarr;
+                                   &rarr;
                                 </button>
                               </div>
                               <div class="grid grid-cols-7 gap-1 text-center mt-4 text-sm text-gray-700">
@@ -215,10 +241,10 @@
                                 <span class="text-gray-400">28</span>
                                 <span class="text-gray-400">29</span>
                                 <span class="text-gray-400">30</span>
-                                <span class="text-gray-400">1</span>
-                                <span class="text-gray-400">2</span>
-                                <span class="text-gray-400">3</span>
-                                <span class="text-gray-400">4</span>
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
                                 <span>5</span>
                                 <span>6</span>
                                 <span class="bg-blue-500 text-white rounded w-6 h-6 flex items-center justify-center mx-auto">9</span>
