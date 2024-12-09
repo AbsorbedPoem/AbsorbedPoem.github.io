@@ -62,7 +62,6 @@ body h1 {
 .user-globe {
     @apply flex items-center whitespace-nowrap duration-150 ease-in-out motion-reduce:transition-none
     border border-zinc-300 rounded-full transition-colors;
-    /* transition: all .12s ease-in-out; */
 }
 
 
@@ -70,7 +69,7 @@ body h1 {
 .header-mini-button {
     @apply rounded-full flex h-[30px] w-[30px] items-center justify-center transition-colors;
 }
-.user-globe:hover, .header-mini-button:hover { @apply bg-main-300 border-main-300 }
+.user-globe:hover, .header-mini-button:hover { @apply bg-main-500 border-main-500 text-white }
 
 
 /* DROPDOWN */
