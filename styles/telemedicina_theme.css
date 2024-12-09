@@ -36,17 +36,21 @@ body h1 {
 }
 
 .gray-card {
-    @apply rounded p-2 bg-gray-200 text-zinc-700;
+    @apply rounded p-2 bg-white text-zinc-800;
 }
 
 .card-group-medicos>div {
-    @apply gray-card flex flex-col gap-2 ;
+    @apply gray-card flex flex-col gap-2 transition-all cursor-pointer;
 }
+.card-group-medicos>div:hover { @apply bg-gray-200 shadow-md -translate-y-2 }
 .card-group-medicos>div>:first-child {
     @apply flex gap-2;
 }
 .card-group-medicos>div>:first-child>img { @apply rounded border-4 border-white }
-.card-group-medicos>div>:nth-child(2) { @apply bg-white rounded }
+.card-group-medicos>div hr {
+    @apply flex flex-col gap-2 transition-all cursor-pointer;
+}
+.card-group-medicos>div:hover hr { @apply border-gray-300 }
 
 
 
