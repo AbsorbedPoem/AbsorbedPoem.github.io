@@ -20,11 +20,11 @@
                 </button>
 
                 <!-- elementos de la izquierda -->
-                <div class="font-bold hidden md:flex">
+                <a href="principal.html" class="font-bold hidden md:flex">
                     <img src="/img/logo.png" class="rounded-full w-[25px] h-[25px]">
                     <span>&nbsp;Telemedicina</span>
                     <span class="text-blue-500">&nbsp;Maracay</span>
-                </div>
+                </a>
 
                 <!-- elementos de la derecha -->
                 <div class="relative flex items-center">
@@ -58,9 +58,9 @@
                             <span class="mx-2">Usuario 1</span>
                         </a>
                     </div>
+                    <!-- Dropdown -->
                     <div id="dropdown-usuario" class="dropdown hidden">
                         <div class="py-1" role="none">
-                            <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
                             <a href="#" class="item">Configuración</a>
                             <a href="#" class="item">Soporte</a>
                             <a href="#" class="item last">Cerrar Sesión</a>
@@ -82,25 +82,37 @@
             md:min-w-fit p-1 bg-slate-800 flex flex-col-reverse md:flex-col justify-end md:justify-between items-start text-gray-200 text-sm">
                 <!-- ARRIBA -->
                 <div class="flex flex-col gap-1">
-                    <a href="#" class="nav-item text-md">
+                    <a href="principal.html" class="nav-item text-md">
                         <i class="fas fa-cube"></i>
                         <p>Telemedicina</p>
                     </a>
 
                     <hr class="border-gray-400">
                     
-                    <a href="#" class="nav-item active">
+                    <a href="principal.html" class="nav-item active">
                         <i class="fas fa-address-card"></i>
                         <p>Especialistas</p>
                     </a>
                     <a href="#" class="nav-item">
+                        <i class="far fa-clock"></i>
+                        <p>Pendientes</p>
+                    </a>
+                    <a href="#" class="nav-item">
                         <i class="far fa-calendar-days"></i>
-                        <p>Horarios</p>
+                        <p>Cronograma</p>
                     </a>
                     <a href="#" class="nav-item">
                         <i class="fas fa-message"></i>
                         <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
                         <p>Mensajes</p>
+                    </a>
+
+                    <hr class="border-gray-400">
+
+                    <a href="#" class="nav-item">
+                        <i class="fas fa-video"></i>
+                        <span class="absolute -mt-4 -ms-[5px] rounded-full bg-teal-400 px-[0.40em] py-[0.40em] text-[0.6rem] font-bold leading-none"></span>
+                        <p>Sala</p>
                     </a>
                     
                 </div>
@@ -125,14 +137,14 @@
             <div class="w-[100%]">
 
                 <!-- marcador de página » -->
-                <p class="bg-slate-500 p-2 text-white text-xs">principal</p>
+                <p class="bg-slate-500 p-2 text-white text-xs">Profesionales » Búsqueda</p>
     
                 <!-- CONTENIDO PROPIO DE LA PáGINA -->
                 <section class="p-5 bg-slate-100">
     
 
                     <div class="card mb-4 text-zinc-600 text-sm">
-                        Para brindarte un mejor servicio, necesitamos saber tu historia médica &nbsp;<div class="btn btn-main text-xsm inline-block py-1 rounded-lg">Llenar historial</div>
+                        Para brindarte un mejor servicio, necesitamos saber tu historia médica &nbsp;<button class="btn btn-main text-xsm inline-block py-1 rounded-lg">Llenar historial</button>
                     </div>
 
                     <!-- contenido -->
@@ -143,18 +155,30 @@
                             </h1>
                             <p class="text-sm text-zinc-600 mb-3">Programa una consulta <b>en línea</b> con un <b>profesional de la salud</b></p>
                             <input class="md:text-xl rounded-full bg-gray-200 appearance-none border-2 border-gray-200 py-3 w-[80%] m-auto px-5 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500 transition-colors" id="inline-full-name" type="text"
-                            placeholder="Qué disciplina necesitas?">
+                            placeholder="Busca una disciplina">
                         </div>
 
                         <hr class="my-3">
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                            <div class="gray-card">Doctorcito 1</div>
-                            <div class="gray-card">Doctorcito 2</div>
-                            <div class="gray-card">Doctorcito 3</div>
-                            <div class="gray-card">Doctorcito 4</div>
-                            <div class="gray-card">Doctorcito 5</div>
-                            <div class="gray-card">Doctorcito 6</div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4
+                        card-group-medicos">
+                            <div>
+                                <div>
+                                    <img src="/img/doctor.jpg" width="100">
+                                    <div>
+                                        <b>Dra. Irene Monsalve</b>
+                                        <p>Especialidades:</p>
+                                        <ul class="text-sm ms-4">
+                                            <li>- Internista <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></li>
+                                            <li>- Dermatóloga <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></li>
+                                            <li>- Cardiología <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    Nombre del doctor mimimimi
+                                </div>
+                            </div>
                         </div>
                     </div>
     
