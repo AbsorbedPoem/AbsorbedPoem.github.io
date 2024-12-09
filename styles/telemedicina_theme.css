@@ -36,8 +36,17 @@ body h1 {
 }
 
 .gray-card {
-    @apply rounded p-3 bg-gray-200 text-zinc-600;
+    @apply rounded p-2 bg-gray-200 text-zinc-700;
 }
+
+.card-group-medicos>div {
+    @apply gray-card flex flex-col gap-2 ;
+}
+.card-group-medicos>div>:first-child {
+    @apply flex gap-2;
+}
+.card-group-medicos>div>:first-child>img { @apply rounded border-4 border-white }
+.card-group-medicos>div>:nth-child(2) { @apply bg-white rounded }
 
 
 
