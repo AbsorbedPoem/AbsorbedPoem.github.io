@@ -979,6 +979,8 @@ video {
 
 .ms-\[90px\] {
   margin-inline-start: 90px;
+.me-4 {
+  margin-inline-end: 1rem;
 }
 
 .ms-\[89px\] {
@@ -1167,9 +1169,9 @@ video {
   border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
 }
 
-.border-zinc-300 {
+.border-zinc-200 {
   --tw-border-opacity: 1;
-  border-color: rgb(212 212 216 / var(--tw-border-opacity, 1));
+  border-color: rgb(228 228 231 / var(--tw-border-opacity, 1));
 }
 
 .border-green-900 {
